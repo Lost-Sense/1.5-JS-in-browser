@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: TTLakes;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: TTLakes;
+  src: url(fonts/TTLakes/TTLakes-Regular.ttf);
+  font-weight: normal;
+}
+
+.swipper-mobile-help {
+  height: 72px;
+  width: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.subtitle {
+  color: #7E7E82;
+  padding: 16px;
+  background-color: #FFFFFF;
+}
+
+.subtitle__title {
+  font-family: TTLakes;
+  font-weight: normal;
+  font-size: 16px;
+}
+
+.repair-swipper {
+  background-color: #F8F8F8;
+  padding: 16px 16px;
+  padding-bottom: 50px;
+}
+
+.swipper__button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* height: 72px;
+  width: 240px !important; */
+  background-color: #FFFFFF;
+  border: 1px solid #EAEAEA;
+  border-radius: 6px;
+  padding: 16px;
+}
+
+.vis-hiden {
+display: none;
+}
+
+.group-swipper-items {
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+}
+
+.swiper-pagination {
+  transform: translate3d(0, 6px, 0)
+}
+
+
+@media (min-width: 768px) {
+
+  .repair-swipper {
+    padding: 24px 24px;
+  }
+  
+  .swipper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px 24px;
+    width: auto;
+    overflow: hidden;
+    max-height: 176px;
+    transition: max-height 0.5s ease-out;
+  }
+  
+  .swipper__button {
+    width: 224px !important;
+    margin-right: 0px !important;
+  }
+  
+  .vis-hiden {
+    display: block;
+    margin-top: 24px;
+  }
+  
+  .vis-hiden__button {
+    background-color: transparent;
+    border-color: transparent;
+    position: relative;
+    padding-left: 32px;
+  }
+  
+  .vis-hiden__button::before {
+    position: absolute;
+    content: url(img/strelki.svg);
+    top: 0px;
+    left: 8px;
+    transition: transform 0.5s ease-out;
+  }
+
+  .vis-hiden__button.active::before {
+    transform: rotate(180deg);
+}
+
+  .group-swipper-items {
+    display: none;
+  }
+  
+}
+
+@media (min-width: 1120px) {
+
+  .repair-swipper {
+    padding: 24px 32px;
+  }
+
+  .swipper {
+    gap: 16px 32px;
+  }
+
+  .swipper__button {
+    height: 72px;
+    width: 240px;
+  }
+
+}
